@@ -1,0 +1,17 @@
+openapi: '3.0.2'
+info:
+  title: HayDay Game Assist
+  version: '1.0'
+  description: A Web Application that help in decision making of HayDay Mobile Strategy Game
+servers:
+  - url: http://localhost:{port}/{basePath}
+    description: Development server
+    variables:
+      port:
+        enum:
+          - "3000"
+          - '4000'
+        default: '5000'
+      basePath:
+        default: v1/hayday
+
