@@ -13,6 +13,9 @@ export const NotificationProvider: React.FC = ({ children }) => {
   });
 
   const errorCallback = (err: AxiosError | string) => {
+    if ((err as AxiosError).message === "Network Error") {
+      return;
+    }
     setNotification({
       severity: "error",
       message:

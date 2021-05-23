@@ -95,7 +95,8 @@ var add_new_machine = function (req, res) { return __awaiter(void 0, void 0, voi
                     .catch(function (err) {
                     console.error(pg_error_codes_1.default[err.code]);
                     console.error(err);
-                    res.status(400).send(pg_error_codes_1.default[err.code]);
+                    // res.status(400).send(errorCodes[err.code]);
+                    res.status(400).send(err.detail);
                 })];
             case 1:
                 _a.sent();

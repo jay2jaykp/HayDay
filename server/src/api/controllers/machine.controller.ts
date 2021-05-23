@@ -39,7 +39,8 @@ export const add_new_machine = async (req: Request, res: Response) => {
     .catch((err) => {
       console.error(errorCodes[err.code]);
       console.error(err);
-      res.status(400).send(errorCodes[err.code]);
+      // res.status(400).send(errorCodes[err.code]);
+      res.status(400).send(err.detail);
     });
 };
 
